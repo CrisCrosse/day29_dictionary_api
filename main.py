@@ -10,7 +10,10 @@ def home():
 
 @app.route("/api/v1/<word>")
 def lookup(word):
-    return {"word": word}
+    definition = word.upper()
+    result_dictionary = {"word": word,
+                         "definition": definition}
+    return result_dictionary
 
 
 if __name__ == "__main__":
